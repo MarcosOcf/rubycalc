@@ -3,7 +3,7 @@ require 'Rubycalc'
 
 describe Rubycalc::Expression do
   let :args do
-    'teste'
+    '1+2'
   end
 
   subject do
@@ -20,11 +20,16 @@ describe Rubycalc::Expression do
 
   context '#solve' do
     it 'returns the solved equation' do
-      expect(subject.solve).to be_an_instance_of(Rubycalc::Iterator)
+      expect(subject.solve).to eq 3
     end
 
-    it 'expect Rubycalc::Iterator args to be an String' do
-      expect(subject.solve.args.class).to equal String
+    context do
+      let :args do
+        '1+2+5'
+      end
+      it 'returns the solved equation' do
+        expect(subject.solve).to eq 8
+      end
     end
   end
 end

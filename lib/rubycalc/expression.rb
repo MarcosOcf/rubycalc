@@ -7,7 +7,8 @@ module Rubycalc
     end
 
     def solve
-      Rubycalc::Iterator.new(@args)
+      all_steps = Rubycalc::Iterator.new(@args).all_steps
+      all_steps[:result]
     end
   end
 end
