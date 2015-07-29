@@ -20,7 +20,7 @@ describe Rubycalc::Iterator do
       {
         expression:"2+3",
         starts_at: 2,
-        operator: Operators::Sum,
+        operator: Operators::Addition,
         result: 5.0
       }
     end

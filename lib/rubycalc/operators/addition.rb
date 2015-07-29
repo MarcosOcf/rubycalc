@@ -1,5 +1,5 @@
 module Operators
-  class Sum
+  class Addition
     def self.priority
       1
     end
