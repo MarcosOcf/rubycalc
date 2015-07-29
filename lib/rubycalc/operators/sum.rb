@@ -7,5 +7,9 @@ module Operators
     def self.matcher
       '\d+\+\d+'
     end
+
+    def self.solve args
+      args[0] + args[1]
+    end
   end
 end

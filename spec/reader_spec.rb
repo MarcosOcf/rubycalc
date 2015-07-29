@@ -47,7 +47,7 @@ describe Rubycalc::Reader do
     context 'on success scenario' do
       let :expected_result do
         {
-          type: Operators::Sum,
+          operator: Operators::Sum,
           starts_at: 0,
           expression: '1+2'
         }
@@ -72,5 +72,4 @@ describe Rubycalc::Reader do
       end
     end
   end
-
 end

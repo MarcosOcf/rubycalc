@@ -8,7 +8,7 @@ module Rubycalc
     def who_is_next? args
       @operators.each do |operator|
         match = find args, operator.matcher
-        return match.merge({type: operator}) if match
+        return match.merge({operator: operator}) if match
       end
       nil
     end
